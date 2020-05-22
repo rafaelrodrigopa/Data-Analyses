@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="shortcut icon" href="./img/new_favicon.png" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -24,7 +25,7 @@
 				</div>-->
 			</header>
 		<main>
-			<h2>Clique aqui para realizar a análise dos arquivos:<button onclick="analysis()">Analyze</button></h2>
+			<h2>Clique aqui para realizar a análise dos arquivos:<button onclick="analysis()" class="run">Analyze</button><button class="clear" onclick="reset()">Clear</button></h2>
 			<div id="analyze">
 				<div class="contratante">
 					<label>Arquivo recebido da Tercerizada</label></br>
@@ -56,9 +57,14 @@
 					<div class="direita">
 						<p class="qtd-unities-contratada">Total de peças da empresa de inventário: &nbsp;&nbsp;</p>
 
+						<form action="" method="post" enctype="multipart/form-data">
+							<input type="file" name="imagem" id="imagem" onchange="previewImagem()">
+							<img id="bate">
+						</form>
+
 						<!--<div id="imgComp">
-							<input type="file" id="inputIMG" onchange="loadImagem(this)">
-							<div id="imagem">fdsa</div>
+							<input type="file" id="inputIMG" onclick="loadImagem()">
+							<div id="imagem"></div>
 						</div>-->
 					</div>
 			</div>

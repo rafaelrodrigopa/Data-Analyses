@@ -30,7 +30,7 @@ header img{
 }
 main{
     width: 1200px;
-    height: 900px;
+    height: 940px;
     position: relative;
     padding: 10px;
     box-sizing: content-box;
@@ -86,7 +86,7 @@ main #analyze .contratado{
 }
 main #result{
     width: 1200px;
-    height: 275px;
+    height: 315px;
     margin-top: 20px;
     background-color: white;
     border: 1px solid gainsboro;
@@ -120,6 +120,15 @@ main #result .direita{
     position: absolute;
     width: 49%;
     left: 50%;
+}
+form{
+    margin-left: 27px;
+}
+#bate{
+    width: 570px;
+    height: 150px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
 }
 #imgComp{
     margin-left: 25px;
