@@ -1,0 +1,143 @@
+table tr td{
+    border-bottom: 1px solid rgb(224, 223, 223);
+}
+#CSVSaida, #CSVSaidaRecebido{
+    height: 400px;
+    overflow: auto;
+}
+input{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    display: flex;
+    padding: 20px;
+}
+header h1{
+    margin-left: 20px;
+    color: rgb(96, 154, 207);
+}
+header img{
+    width: 100px;
+}
+#wrapper{
+    height: 100%;
+}
+main{
+    width: 1200px;
+    height: 900px;
+    position: relative;
+    padding: 10px;
+    box-sizing: content-box;
+    border: 1px solid rgb(226, 224, 224);
+    box-shadow: 20px;
+    border-radius: 10px;
+    background-image: url(../img/fundo_main.jpg);
+    background-size: cover;
+}
+main h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: gray;
+}
+main button{
+    margin-left: 20px;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    color: gray;
+    outline: none;
+}
+main button:hover{
+    background-color: rgb(96, 154, 207);
+    color: white;
+}
+main #analyze{
+    height: 500px;
+    display: flex;
+    padding: 10px;
+    border: 1px solid gainsboro;
+    background-color: white;
+    opacity: 0.8;
+}
+main #analyze .contratante{
+    padding: 10px;
+    margin: 10px;
+    width: 260px;
+    background-color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+main #analyze .contratado{
+    padding: 10px;
+    margin: 10px;
+    width: 890px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+main #result{
+    width: 1200px;
+    height: 275px;
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid gainsboro;
+}
+main #result h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 26px;
+    color: gray;
+    border-bottom: 1px solid gainsboro;
+}
+main #result p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 26px;
+}
+main #result .esquerda{
+    position: absolute;
+    width: 49%;
+}
+main #result .esquerda .cart-divergencia{
+    display: none;
+    height: 110px;
+    border-radius: 5px;
+    padding: 1px;
+    border-bottom: 1px solid gainsboro;
+}
+main #result .esquerda .cart-divergencia h2{
+    border-top: 1px solid gainsboro;
+    font-size: 19px;
+}
+main #result .direita{
+    position: absolute;
+    width: 49%;
+    left: 50%;
+}
+#imgComp{
+    margin-left: 25px;
+}
+#imagem{
+    
+}
+footer{
+    position: relative;
+    float: inline-end;
+    width: 100%;
+    margin-top: 20px;
+    height: 100px;
+    text-align: center;
+    color: rgb(121, 160, 199);
+    background-color: rgb(207, 220, 223);
+}
+footer a{
+    text-decoration: none;
+    padding-top: 20px;
+}

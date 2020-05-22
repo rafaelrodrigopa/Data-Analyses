@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>File Analysis</title>
+	<script src="./js/scripts.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="./img/new_favicon.png" type="image/x-icon">
+</head>
+<body>
+	<div id="wrapper">
+			<header>
+				<img src="./img/logo.JPG" alt="Logotipo">
+				<h1>Data Analysis</h1>
+				<!--<div id="menu-bar">
+					<nav>
+						<ul>
+							<a href="#" onclick="home()"><li>Home</li></a>
+							<a href="#" onclick="home()"><li>Analyze</li></a>
+						</ul>
+					</nav>
+				</div>-->
+			</header>
+		<main>
+			<h2>Clique aqui para realizar a análise dos arquivos:<button onclick="analysis()">Analyze</button></h2>
+			<div id="analyze">
+				<div class="contratante">
+					<label>Arquivo recebido da Tercerizada</label></br>
+					<input type="file" id="inputCSV" onchange="pegaCSV(this,'CSVSaida')">
+					<div id="CSVSaida"></div>
+				</div>
+				
+				<div class="contratado">
+					<label>Arquivo enviado para a Tercerizada</label></br>
+					<input type="file" id="inputCSVRecebido" onchange="pegaCSV(this,'CSVSaidaRecebido')">
+					<div id="CSVSaidaRecebido"></div>
+				</div>
+			</div>
+
+			<div id="result">
+				<h2>Resultado da análise de arquivos: </h2>
+					<div class="esquerda">
+						<p class="env-items">Total de itens enviados para a Tercerizada:&nbsp;&nbsp; </p>
+						<p class="rec-items">Total de itens recebidos da Tercerizada:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+
+						<div class="cart-divergencia">
+							<h2>Divergência</h2>
+							<div class="diver-justify">
+								<p></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="direita">
+						<p class="qtd-unities-contratada">Total de peças da empresa de inventário: &nbsp;&nbsp;</p>
+
+						<!--<div id="imgComp">
+							<input type="file" id="inputIMG" onchange="loadImagem(this)">
+							<div id="imagem">fdsa</div>
+						</div>-->
+					</div>
+			</div>
+		</main>
+		<!-- <div id="home">
+			<h2>File Analysis</h2>
+			<p>O File Analysis é um simples sistema web com a funcionalidade realizar um comparativo entre dois arquivos de inventário, sendo um arquivo enviado pela empresa que contratou a empresa de inventário e outro da própria empresa que realiza as contagens.</p>
+			<h2>Como funciona?</h2>
+			<p>O primeiro <strong>input</strong> recebe o arquivo enviado pela empresa que contratou enquanto que o segundo recebe o arquivo enviado pela empresa contratada. Após ter recebido os dois arquivos o sistema irá realizar uma análise dos dois arquivo, verificando linha a linha se eles são compatíveis, a cada compatibilidade o sistema, automaticamente, exclui a linha e caso haja incompatibilidades, o sistema deixará na página para a verificação do analista.</p>
+		</div> -->
+	</div>
+	<!--<footer>
+		<p>&copy; Rafael Rodrigo 2020</p>
+		<a class="lin" href="https://www.linkedin.com/in/rafael-almeida-p" target="_blank"><img src="./img/linkedin-brands.svg" alt="logotipo_linkedin"></a>
+		<a class="git" href="https://github.com/rafaelrodrigopa" target="_blank"><img src="./img/github-brands.svg" alt="logotipo_linkedin"></a>
+	</footer>-->
+</body>
+</html>
