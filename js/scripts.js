@@ -9,7 +9,7 @@ var vArq2New = [];
 var totalPecas = [];
 var totalItensNaTela = false;
 
-
+//Divs que contém as tabelas criadas a partir dos arquivos
 const divCSVSaida = document.getElementById('CSVSaida');
 const divCSVSaidaRecebido = document.getElementById('CSVSaidaRecebido');
 
@@ -34,33 +34,41 @@ function leCSV(evt) {
         var fileLine = fileArr[i].split('\n');
         
 			for (var j=0; j<fileLine.length; j++) {
-                strDiv += '<td>'+fileLine[j].trim()+'</td>';
 
-                if (inputElement == 'CSVSaida') {
-                    vArq1.push(fileLine[j].trim());
+                //Impede o leito de pegar uma em branco do arquivo
+                if (fileLine[j] != '') {
+                    strDiv += '<td>'+fileLine[j].trim()+'</td>';
 
-                    //Pega os digitos referente a quantidade do produto
-                    totalPecas.push(fileLine[j].trim().substr(14,fileLine[j].length))
+                    if (inputElement == 'CSVSaida') {
+                        vArq1.push(fileLine[j].trim());
 
-                }else{
-                    vArq2.push(fileLine[j].trim());
+                        //Pega os digitos referente a quantidade do produto
+                        totalPecas.push(fileLine[j].trim().substr(14,fileLine[j].length))
+
+                    }else{
+                        vArq2.push(fileLine[j].trim());
+                    }   
                 }
 			}
 		strDiv += '</tr>';
 	}
     strDiv += '</table>';
 
+    //Incorpora a tabela na página com os dados carregados
 	var saida = document.getElementById(inputElement);
         saida.innerHTML = strDiv;
         
+    //Quantidades finais de cada arquivo
     qtdContratado = vArq1.length
     qtdContratante = vArq2.length
+
 }
 function analysis(){
 
     const btnRun = document.querySelector('.run');
     const btnClear = document.querySelector('.clear');
 
+    //Impede o sistema de rodar se os arquivos não forem selecionados
     if(vArq1.length === 0 || vArq2.length ===0){
         alert('Faça o upload dos arquivos para dar continuidade.')
     }else{
@@ -75,8 +83,6 @@ function analysis(){
             totalPecas[m] = totalPecas[m]*1;
             totalPecasSoma += totalPecas[m];
         }
-
-        //console.log(totalPecasSoma);
 
         if (totalItensNaTela == false) {
             const itemTotalEnv = document.querySelector('.env-items');
