@@ -1,152 +1,195 @@
+body, ul, li, p{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: left;
+    background-color: green;
+}
+h2{
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(71, 134, 163);
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+input{
+    margin-top: 10px;
+}
+button{
+    padding: 7px;
+    margin-left: 5px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    outline-color: rgb(158, 158, 158);
+    background-color: rgb(158, 158, 158);
+}
+button:hover{
+    background-color: rgb(71, 134, 163);
+}
+table{
+    margin-top: 10px;
+    font-size: 12px;
+}
+table tr{
+    border: 1px solid gray;
+}
 table tr td{
     border-bottom: 1px solid rgb(224, 223, 223);
+}
+table th{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
 }
 #CSVSaida, #CSVSaidaRecebido{
     height: 400px;
     overflow: auto;
 }
-input{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 header{
+    background-color: black;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
-header h1{
-    margin-left: 20px;
-    color: rgb(96, 154, 207);
-}
 header img{
-    width: 100px;
+    width: 50px;
+}
+#menu-bar ul{
+    display: flex;
+}
+#menu-bar ul li{
+    color: white;
+    margin-left: 10px;
+}
+#menu-bar ul li{
+    display: block;
+    padding: 10px;
+
+    /*Alt*/
+    border: 1px solid rgb(71, 134, 163);
+    border-radius: 5px;
+
 }
 #wrapper{
-    height: 100%;
-}
-main{
-    width: 1200px;
-    height: 940px;
-    position: relative;
-    padding: 10px;
-    box-sizing: content-box;
-    border: 1px solid rgb(226, 224, 224);
-    box-shadow: 20px;
-    border-radius: 10px;
-    background-image: url(../img/fundo_main.jpg);
-    background-size: cover;
-}
-main h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: gray;
-}
-main button{
-    margin-left: 20px;
-    padding: 6px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    border-radius: 10px;
-    border: none;
-    font-weight: 600;
-    color: gray;
-    outline: none;
-}
-main button:hover{
-    background-color: rgb(96, 154, 207);
-    color: white;
-}
-main #analyze{
-    height: 500px;
     display: flex;
-    padding: 10px;
-    border: 1px solid gainsboro;
-    background-color: white;
-    opacity: 0.8;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgb(248, 245, 245);   
 }
-main #analyze .contratante{
+#wrapper #analyze{
+    /*alt*/
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: 10px;
+    border-radius: 5px;
+
+    background-image: url(../img/eye-solid.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 99em;
+    background-clip: padding-box;
+
+}
+#wrapper #analyze .contratante, .contratado{
+    padding: 10px;
+    opacity: 0.9;
+}
+.contratado{
+    background-color: white;
+    max-width: 800px;
+    width: 48.3%;
+}
+.contratante{
+    background-color: white;
+    max-width: 585px;
+    width: 48.2%;
+}
+#wrapper #result{
+    
+    background-color: white;
+    
+    border: 1px solid rgb(71, 134, 163);
     padding: 10px;
     margin: 10px;
-    width: 260px;
-    background-color: white;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    border-radius: 5px;
 }
-main #analyze .contratado{
+#result .esquerda{
     padding: 10px;
-    margin: 10px;
-    width: 890px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    width: 31.5em;
 }
-main #result{
-    width: 1200px;
-    height: 315px;
-    margin-top: 20px;
-    background-color: white;
-    border: 1px solid gainsboro;
+#result .esquerda p{
+    margin-top: 10px;
 }
-main #result h2{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 26px;
-    color: gray;
-    border-bottom: 1px solid gainsboro;
-}
-main #result p{
-    font-family: Arial, Helvetica, sans-serif;
-    margin-left: 26px;
-}
-main #result .esquerda{
-    position: absolute;
-    width: 49%;
+#result .direita{
+    padding: 10px;
+    width: 31.5em;
 }
 main #result .esquerda .cart-divergencia{
     display: none;
-    height: 110px;
+    margin-top: 20px;
     border-radius: 5px;
+    height: 133px;
     padding: 1px;
-    border-bottom: 1px solid gainsboro;
+    border: 1px solid brown;
+    background-color: rgb(235, 235, 235);
 }
 main #result .esquerda .cart-divergencia h2{
-    border-top: 1px solid gainsboro;
-    font-size: 19px;
+    margin: 0px;
+    background-color: rgba(255, 0, 0, 0.247);
+    color: brown;
+    border-radius: 5px 5px 0px 0px;
 }
-main #result .direita{
-    position: absolute;
-    width: 49%;
-    left: 50%;
+main #result .esquerda .cart-divergencia p{
+    padding: 10px;
 }
 form{
-    margin-left: 27px;
+    padding: 10px 10px 10px 0px;
+    max-width: 560px;
 }
 #bate{
-    width: 570px;
+    width: 50vw;
     height: 150px;
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-}
-#imgComp{
-    margin-left: 25px;
-}
-#imagem{
-    
+    margin-top: 5px;
 }
 footer{
-    position: relative;
-    float: inline-end;
-    width: 100%;
-    margin-top: 20px;
-    height: 100px;
-    text-align: center;
-    color: rgb(121, 160, 199);
-    background-color: rgb(207, 220, 223);
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
-footer a{
-    text-decoration: none;
-    padding-top: 20px;
+footer p{
+    color: rgb(179, 179, 179);
+    padding: 5px;
+    font-size: 14px;
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+}
+.redes-sociais a{
+    margin: 0px 5px;
 }

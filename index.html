@@ -1,31 +1,40 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+	<!-- SEO -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Sistema web comparador de arquivo de inventário.">
+	<meta name="keywords" content="Inventário, Tercerizada, comparativo, arquivos, sistema">
+	<meta name="robots" content="noindex, nofollow">
+	<meta name="author" content="Rafael Rodrigo">
+	<meta name="copyright" content="Rafael Rodrigo">
+	<meta name="laguage" content="pt-BR">
+	<meta name="rating" content="general">
+
 	<title>File Analysis</title>
+
 	<script src="./js/scripts.js"></script>
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="shortcut icon" href="./img/new_favicon.png" type="image/x-icon">
+	<link rel="shortcut icon" href="./img/eye-solid.svg" type="image/x-icon">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+	<header>
+		<img  src="./img/eye-solid.svg" alt="Logotipo">
+		<!--<h1>Data Analysis</h1>-->
+		<div id="menu-bar">
+			<nav>
+				<ul>
+					<li><a href="./index.html">Análise</a></li>
+					<li><a href="./sobre.html">Sobre</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 	<div id="wrapper">
-			<header>
-				<img src="./img/logo.JPG" alt="Logotipo">
-				<h1>Data Analysis</h1>
-				<!--<div id="menu-bar">
-					<nav>
-						<ul>
-							<a href="#" onclick="home()"><li>Home</li></a>
-							<a href="#" onclick="home()"><li>Analyze</li></a>
-						</ul>
-					</nav>
-				</div>-->
-			</header>
 		<main>
-			<h2>Clique aqui para realizar a análise dos arquivos:<button onclick="analysis()" class="run">Analyze</button><button class="clear" onclick="reset()">Clear</button></h2>
+			<h2>Clique nos botões para limpar ou analisar: <button onclick="analysis()" class="run">Analisar</button><button class="clear" onclick="reset()">Limpar</button></h2>
 			<div id="analyze">
 				<div class="contratante">
 					<label>Arquivo recebido da Tercerizada</label></br>
@@ -39,9 +48,9 @@
 					<div id="CSVSaidaRecebido"></div>
 				</div>
 			</div>
-
+			<h2 class="comp">Resultado da análise de arquivos: </h2>
 			<div id="result">
-				<h2>Resultado da análise de arquivos: </h2>
+
 					<div class="esquerda">
 						<p class="env-items">Total de itens enviados para a Tercerizada:&nbsp;&nbsp; </p>
 						<p class="rec-items">Total de itens recebidos da Tercerizada:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
@@ -69,17 +78,13 @@
 					</div>
 			</div>
 		</main>
-		<!-- <div id="home">
-			<h2>File Analysis</h2>
-			<p>O File Analysis é um simples sistema web com a funcionalidade realizar um comparativo entre dois arquivos de inventário, sendo um arquivo enviado pela empresa que contratou a empresa de inventário e outro da própria empresa que realiza as contagens.</p>
-			<h2>Como funciona?</h2>
-			<p>O primeiro <strong>input</strong> recebe o arquivo enviado pela empresa que contratou enquanto que o segundo recebe o arquivo enviado pela empresa contratada. Após ter recebido os dois arquivos o sistema irá realizar uma análise dos dois arquivo, verificando linha a linha se eles são compatíveis, a cada compatibilidade o sistema, automaticamente, exclui a linha e caso haja incompatibilidades, o sistema deixará na página para a verificação do analista.</p>
-		</div> -->
 	</div>
-	<!--<footer>
+	<footer>
 		<p>&copy; Rafael Rodrigo 2020</p>
-		<a class="lin" href="https://www.linkedin.com/in/rafael-almeida-p" target="_blank"><img src="./img/linkedin-brands.svg" alt="logotipo_linkedin"></a>
-		<a class="git" href="https://github.com/rafaelrodrigopa" target="_blank"><img src="./img/github-brands.svg" alt="logotipo_linkedin"></a>
-	</footer>-->
+		<div class="redes-sociais">
+			<a href="https://www.linkedin.com/in/rafael-almeida-p" target="_blank"><img src="./img/linkedin-brands.svg" alt="logotipo_linkedin"></a>
+			<a href="https://github.com/rafaelrodrigopa" target="_blank"><img src="./img/github-brands.svg" alt="logotipo_linkedin"></a>
+		</div>
+	</footer>
 </body>
 </html>

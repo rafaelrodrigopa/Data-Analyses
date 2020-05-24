@@ -20,15 +20,30 @@ window.onload = function init() {
 function pegaCSV(inputFile, element) {
 
     var file = inputFile.files[0];
-    leitorDeCSV.readAsText(file);
-    this.inputElement = element;
+
+    //Validação para não pegar outro tipo de arquivo, apenas txt
+    if (file.name.substr(file.name.length-3,file.name.length) == 'txt') {
+        leitorDeCSV.readAsText(file);
+        this.inputElement = element;
+    }else{
+        alert('Atenção!\nInsira apenas arquivos de texto.');
+        reset();
+    }
+    
+    
 }
 
 function leCSV(evt) {
 
 	var fileArr = evt.target.result.split('\n');
-	var strDiv = '<table class=' + inputElement + '>';
+    var strDiv = '<table class=' + inputElement + '>';
     
+    if (inputElement == 'CSVSaida') {
+        strDiv += '<th>Formato Código/Quant.</th>'   
+    }else{
+        strDiv += '<th>Formato Arquivo cadastro</th>'
+    }
+
 	for (var i=0; i<fileArr.length; i++) {
         strDiv += '<tr>';
         var fileLine = fileArr[i].split('\n');
@@ -68,7 +83,7 @@ function analysis(){
         var divergenciaDeItens = 0;
         var totalPecasSoma = 0;
         const unidTotalPecas = document.querySelector('.qtd-unities-contratada');
-        const resultH2 = document.querySelector('#result h2');
+        const resultH2 = document.querySelector('.comp');
         const justify = document.querySelector('.cart-divergencia');
 
         for(let m = 0; m < totalPecas.length; m++){
@@ -94,7 +109,7 @@ function analysis(){
                 itemTotalEnv.querySelector('strong').style.color = 'green';
                 itemTotalRec.querySelector('strong').style.color = 'green';
 
-                resultH2.innerHTML += `<strong>Arquivos Compativeis.</strong>`;
+                resultH2.innerHTML += `<strong style='padding: 10px; background: rgb(207, 230, 197); border-radius: 5px;'>Arquivos Compativeis.</strong>`;
                 resultH2.querySelector('strong').style.color = 'green';
 
             }else{
@@ -103,20 +118,20 @@ function analysis(){
 
                 justify.style.display = 'block';
 
-                resultH2.innerHTML += `<strong>Arquivos Incompativeis.</strong>`;
-                resultH2.querySelector('strong').style.color = 'red';
+                resultH2.innerHTML += `<strong style='padding: 10px; background-color: rgba(255, 0, 0, 0.247); border-radius: 5px;'>Arquivos Incompativeis.</strong>`;
+                resultH2.querySelector('strong').style.color = 'brown';
 
                 if (qtdContratante < qtdContratado) {
                     divergenciaDeItens = (qtdContratado-qtdContratante);
-                    justify.querySelector('.diver-justify p').innerHTML = `O arquivo recebido da tercerizada possui <strong style='color:green;'>+${divergenciaDeItens}</strong> produto em relação ao enviado.`             
+                    justify.querySelector('.diver-justify p').innerHTML = `O arquivo <b>recebido</b> da tercerizada possui <strong style='color:green;'>+${divergenciaDeItens}</strong> produto em relação ao enviado.`             
                 }else{
                     divergenciaDeItens = (qtdContratante-qtdContratado);
-                    justify.querySelector('.diver-justify p').innerHTML = `O arquivo enviado para a tercerizada possui <strong style='color:green;'>+${divergenciaDeItens}</strong> produto em relação ao recebido.` 
+                    justify.querySelector('.diver-justify p').innerHTML = `O arquivo <b>enviado</b> para a tercerizada possui <strong style='color:green;'>+${divergenciaDeItens}</strong> produto em relação ao recebido.` 
                 }
             }
             totalItensNaTela = true;
 
-            unidTotalPecas.innerHTML += `<strong>R$ ${totalPecasSoma.toLocaleString({style: 'currency',currency: 'BRL'})}</strong>`;
+            unidTotalPecas.innerHTML += `<strong style='background: gray;padding: 10px; border-radius: 5px;color: white;'>R$ ${totalPecasSoma.toLocaleString({style: 'currency',currency: 'BRL'})}</strong>`;
         }
         
 
