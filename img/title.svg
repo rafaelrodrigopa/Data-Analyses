@@ -4,7 +4,7 @@
      xmlns:xlink="http://www.w3.org/1999/xlink"
      width="200" height="100"
 >
-  <text font-size="36" x="30" y="50">
+  <text font-size="36" x="130" y="50">
     <tspan fill="blue">File Analysis</tspan>
   </text>
 </svg>
