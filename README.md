@@ -1,7 +1,7 @@
 <h1 align="center"><a><img src="https://github.com/rafaelrodrigopa/rafaelrodrigopa.github.io/blob/master/img/title.svg"></a></h1>
 
 <h3 align="center">
-  Sistema web feito com JavaScript e JQuery.
+  Sistema web feito com HTML/CSS/JavaScript e JQuery.
 </h3>
 <p align="center">
 <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/rafaelrodrigopa/rafaelrodrigopa.github.io?style=plastic">
