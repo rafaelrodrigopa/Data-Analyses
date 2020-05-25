@@ -1,8 +1,5 @@
-<a><img src="https://github.com/rafaelrodrigopa/rafaelrodrigopa.github.io/blob/master/img/title.svg"></a>
+<h1><a><img src="https://github.com/rafaelrodrigopa/rafaelrodrigopa.github.io/blob/master/img/title.svg"></a></h1>
 
-<h1 align="center">
-  File Analysis
-</h1>
 <h3 align="center">
   Sistema web feito com JavaScript e JQuery.
 </h3>
