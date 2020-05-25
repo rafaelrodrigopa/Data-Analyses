@@ -1,4 +1,4 @@
-<h1><a><img src="https://github.com/rafaelrodrigopa/rafaelrodrigopa.github.io/blob/master/img/title.svg"></a></h1>
+<center><h1><a><img src="https://github.com/rafaelrodrigopa/rafaelrodrigopa.github.io/blob/master/img/title.svg"></a></h1></center>
 
 <h3 align="center">
   Sistema web feito com JavaScript e JQuery.
